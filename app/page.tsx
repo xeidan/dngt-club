@@ -280,6 +280,11 @@ export default function LaunchPage() {
           box-sizing: border-box;
         }
 
+        ::selection {
+          background: rgba(245, 233, 0, 0.22);
+          color: #ffffff;
+        }
+
         @keyframes float {
           0%,
           100% {
@@ -342,7 +347,7 @@ export default function LaunchPage() {
           NAV
       ====================================================== */}
 
-      <nav className="relative z-50 mx-auto mt-5 w-[calc(100%-24px)] max-w-6xl rounded-[18px] border border-white/15 bg-black/90 px-3 py-2.5 shadow-[0_18px_60px_rgba(0,0,0,.45)] backdrop-blur-2xl sm:mt-6 sm:w-[calc(100%-32px)] sm:rounded-2xl sm:px-5 sm:py-3 md:px-7">
+      <nav className="sticky top-4 z-50 mx-auto mt-5 w-[calc(100%-24px)] max-w-6xl rounded-[18px] border border-white/15 bg-white/[0.06] px-3 py-2.5 shadow-[0_18px_60px_rgba(0,0,0,.45)] backdrop-blur-2xl sm:mt-6 sm:w-[calc(100%-32px)] sm:rounded-2xl sm:px-5 sm:py-3 md:px-7">
         <div className="flex items-center gap-3">
           <a
             href="#top"
@@ -353,7 +358,7 @@ export default function LaunchPage() {
           </a>
 
           <div className="min-w-0 flex-1 overflow-hidden">
-            <div className="flex items-center justify-center gap-0 whitespace-nowrap text-[8px] font-black uppercase tracking-[0.08em] text-white/75 sm:gap-3 sm:text-[8px] sm:tracking-[0.16em] md:gap-5">
+            <div className="flex items-center justify-center gap-2 whitespace-nowrap text-[8px] font-black uppercase tracking-[0.04em] text-white/80 sm:gap-3 sm:text-[8px] sm:tracking-[0.16em] md:gap-5">
               <a href="#top" className="transition-colors hover:text-white">
                 {t.about}
               </a>
@@ -419,11 +424,11 @@ export default function LaunchPage() {
         <div className="absolute right-[-4%] top-[18%] hidden h-[500px] w-[40%] rotate-[9deg] rounded-[3rem] border border-white/10 bg-black lg:block" />
 
         <div className="relative mx-auto max-w-5xl">
-          <div className="overflow-hidden rounded-[2rem] border border-white/15 bg-black shadow-[0_40px_120px_rgba(0,0,0,.55)]">
+          <div className="overflow-hidden rounded-[2rem] border border-white/15 bg-white/[0.025] shadow-[0_40px_120px_rgba(0,0,0,.55)] backdrop-blur-sm">
 
             {/* browser header */}
 
-            <div className="flex items-center justify-between border-b border-white/10 px-5 py-3 md:px-7">
+            <div className="flex items-center justify-between border-b border-white/10 bg-white/[0.02] px-5 py-3 md:px-7">
               <div className="text-[10px] font-black tracking-[-0.04em] text-[#F5E900]">
                 $DNGT
               </div>
@@ -439,7 +444,7 @@ export default function LaunchPage() {
                 href={UNISWAP_URL}
                 target="_blank"
                 rel="noreferrer"
-                className="rounded-md border border-[#3F246C] bg-[#7754B2] px-4 py-1.5 text-[8px] font-black shadow-[2px_2px_0_#3F246C]"
+                className="rounded-md border border-[#6A4AA8] bg-[#7754B2] px-4 py-1.5 text-[8px] font-black shadow-[2px_2px_0_#3F246C]"
               >
                 {t.buy}
               </a>
@@ -498,7 +503,7 @@ export default function LaunchPage() {
 
               {/* contract */}
 
-              <div className="relative z-30 mx-auto mt-2 flex max-w-md items-center justify-between gap-2 rounded-lg border border-white/20 bg-black px-3 py-2 shadow-[0_10px_30px_rgba(0,0,0,.3)]">
+              <div className="relative z-30 mx-auto mt-2 flex max-w-md items-center justify-between gap-2 rounded-lg border border-white/15 bg-white/[0.035] px-3 py-2 shadow-[0_10px_30px_rgba(0,0,0,.3)] backdrop-blur-md">
                 <div className="min-w-0">
                   <div className="truncate font-mono text-[7px] text-white/60 md:text-[8px]">
                     {CONTRACT_ADDRESS}
@@ -527,7 +532,7 @@ export default function LaunchPage() {
                   RAGEBAIT INPUT
               ================================================== */}
 
-              <div className="relative z-30 mx-auto mt-6 max-w-xl rounded-2xl border border-white/10 bg-white/[0.025] p-5 text-center shadow-[0_20px_60px_rgba(0,0,0,.25)]">
+              <div className="relative z-30 mx-auto mt-6 max-w-xl rounded-2xl border border-white/10 bg-white/[0.045] p-5 text-center shadow-[0_20px_60px_rgba(0,0,0,.25)] backdrop-blur-md">
                 <div className="text-[11px] font-black uppercase tracking-[0.22em] text-white">
                   {t.rageTitle}
                 </div>
@@ -605,8 +610,10 @@ export default function LaunchPage() {
                   (icon) => (
                     <a
                       key={icon}
-                      href="#"
-                      className="flex h-8 w-8 items-center justify-center rounded-md bg-white text-sm font-black text-[#7754B2] shadow-[2px_2px_0_#624397] transition hover:-translate-y-1"
+                      href="https://x.com/dngtttt"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="flex h-9 w-9 items-center justify-center rounded-lg border border-white/15 bg-white/[0.08] text-sm font-black text-white shadow-[0_8px_24px_rgba(0,0,0,.22)] backdrop-blur-md transition hover:-translate-y-1 hover:bg-white/[0.14]"
                     >
                       {icon}
                     </a>
