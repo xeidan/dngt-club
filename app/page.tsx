@@ -9,7 +9,7 @@ const schoolbell = Schoolbell({
 });
 
 const CONTRACT_ADDRESS =
-  "0x888109e603F87a6AC75a0115d54316b3eAe9125d";
+  "4duRRwKufXEsMYDRQM8CHheHA9V4p4kiU5UNaPAGpump";
 
 const UNISWAP_URL =
   `https://app.uniswap.org/swap?chain=base&outputCurrency=${CONTRACT_ADDRESS}`;
