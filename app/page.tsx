@@ -11,8 +11,8 @@ const schoolbell = Schoolbell({
 const CONTRACT_ADDRESS =
   "4duRRwKufXEsMYDRQM8CHheHA9V4p4kiU5UNaPAGpump";
 
-const UNISWAP_URL =
-  `https://app.uniswap.org/swap?chain=base&outputCurrency=${CONTRACT_ADDRESS}`;
+const TOKEN_URL =
+  `https://pump.fun/coin/${CONTRACT_ADDRESS}`;
 
 type Language = "en" | "zh";
 
@@ -72,7 +72,7 @@ const copy = {
     share: "SHARE ON X",
     clear: "CLEAR",
 
-    contract: "CONTRACT",
+    contract: "TOKEN MINT",
     copy: "COPY",
     copied: "COPIED",
 
@@ -97,7 +97,7 @@ const copy = {
     share: "分享到 X",
     clear: "清除",
 
-    contract: "合约",
+    contract: "代币地址",
     copy: "复制",
     copied: "已复制",
 
@@ -224,7 +224,7 @@ export default function LaunchPage() {
     if (!value) return;
 
     const url =
-      `https://twitter.com/intent/tweet?text=` +
+      `https://x.com/intent/post?text=` +
       encodeURIComponent(t.shareText(value));
 
     window.open(
@@ -400,7 +400,7 @@ export default function LaunchPage() {
             </div>
 
             <a
-              href={UNISWAP_URL}
+              href={TOKEN_URL}
               target="_blank"
               rel="noreferrer"
               className="rounded-lg bg-white px-3 py-2 text-[8px] font-black text-[#5E449A] shadow-[2px_2px_0_#3F246C] transition hover:-translate-y-0.5 hover:shadow-[2px_3px_0_#3F246C] sm:px-4 sm:text-[9px]"
@@ -441,7 +441,7 @@ export default function LaunchPage() {
               </div>
 
               <a
-                href={UNISWAP_URL}
+                href={TOKEN_URL}
                 target="_blank"
                 rel="noreferrer"
                 className="rounded-md border border-[#6A4AA8] bg-[#7754B2] px-4 py-1.5 text-[8px] font-black shadow-[2px_2px_0_#3F246C]"
